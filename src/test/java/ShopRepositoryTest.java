@@ -11,13 +11,15 @@ public class ShopRepositoryTest {
         ShopRepository repo = new ShopRepository();
         Product product1 = new Product(1, "Лаваш", 100);
         Product product2 = new Product(2, "Капуста", 150);
+        Product product3 = new Product(3,"Курица", 600);
 
         repo.add(product1);
         repo.add(product2);
+        repo.add(product3);
 
-        repo.removeById(1);
+        repo.removeById(3);
 
-        Product[] expected = {product2};
+        Product[] expected = {product1,product2};
         Product[] actual = repo.findAll();
 
         Assertions.assertArrayEquals(expected, actual);

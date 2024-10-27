@@ -34,6 +34,7 @@ public class ShopRepository {
         return products;
     }
 
+
     public void remove(int id) {
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;
@@ -65,5 +66,6 @@ public class ShopRepository {
         }
         return null;
     }
+
 }
 
